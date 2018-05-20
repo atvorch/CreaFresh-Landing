@@ -1,0 +1,13 @@
+//------------------------------- VARIABLES
+$screen-xs: 320;
+$screen-sm: 640;
+$screen-md: 1024;
+$screen-lg: 1280;
+$screen-hg: 1920;
+$screen-gt: 2550px;
+
+$screens: (xs: $screen-xs, sm: $screen-sm, md: $screen-md, lg: $screen-lg, hg: $screen-hg, gt: $screen-gt);
+
+$gap: 7;
+$color-vivid-cyan: #40d3ad;
+

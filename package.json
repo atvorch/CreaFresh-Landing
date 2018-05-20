@@ -1,0 +1,26 @@
+{
+  "name": "test-markupus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atvorch/Creafresh.git"
+  },
+  "author": "aTvorch",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp-js-minify": "0.0.3"
+  }
+}
