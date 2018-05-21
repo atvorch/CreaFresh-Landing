@@ -1,4 +1,4 @@
-# CreaFresh-Landing
+# CreaFresh
 CreaFresh Landing Page
 
 # Install & Run
