@@ -2,5 +2,5 @@
 CreaFresh Landing Page
 
 # Install & Run
-$ npm install
+$ npm install  
 $ npm run build
