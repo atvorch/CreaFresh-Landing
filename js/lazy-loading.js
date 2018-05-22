@@ -2,7 +2,7 @@
                 var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
                 var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
                 if (("IntersectionObserver" in window)) {
-                    var lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
                         for(var i=0; i < entries.length; i++){
                             if (entries[i].isIntersecting) {
                                 var lazyImage = entries[i].target;
@@ -18,10 +18,11 @@
                         lazyImageObserver.observe(lazyImage);
                     });
 
-                    var lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+                    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
                         for(var j=0; j < entries.length; j++){
                             if (entries[j].isIntersecting) {
                                 var lazyBg= entries[j].target;
+                             
                                 lazyBg.classList.add("loaded");
                                 lazyBackgroundObserver.unobserve(lazyBg);
                             }
@@ -29,7 +30,10 @@
                     });
   
                     lazyBackgrounds.forEach(function(lazyBackground) {
-                        lazyBackgroundObserver.observe(lazyBackground);
+                        setTimeout(function (){
+                            lazyBackgroundObserver.observe(lazyBackground);
+                        }, 500);
+                        
                     });
                   
                 } else {

@@ -79,6 +79,7 @@ gulp.task('watch', function () {
 	gulp.watch(path.watch.js, ['build:js']);
 });
 
-gulp.task('build', gulpSequence('build:img', 'build:sass', 'build:js', 'browser-sync', 'watch'));
+gulp.task('build-with-images', gulpSequence('build:img', 'build:sass', 'build:js', 'browser-sync', 'watch'));
+gulp.task('build', gulpSequence('build:sass', 'build:js', 'browser-sync', 'watch'));
 
 
