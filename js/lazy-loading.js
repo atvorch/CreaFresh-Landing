@@ -1,13 +1,32 @@
             document.addEventListener("DOMContentLoaded", function() {
                 var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+                var lazySources = [].slice.call(document.querySelectorAll("source.lazy"));
                 var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
                 if (("IntersectionObserver" in window)) {
+                    let lazySourcesObserver = new IntersectionObserver(function(entries, observer) {
+                        for(var i=0; i < entries.length; i++){
+                            if (entries[i].isIntersecting) {
+                                var lazySource = entries[i].target;
+                                lazySource.srcset = lazySource.dataset.srcset;
+                                lazySource.classList.remove("lazy");
+                                lazySourcesObserver.unobserve(lazySource);
+                            }
+                        }
+                    });
+
+                    lazySources.forEach(function(lazySource) {
+                        lazySourcesObserver.observe(lazySource);
+                    });
+
                     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
                         for(var i=0; i < entries.length; i++){
                             if (entries[i].isIntersecting) {
                                 var lazyImage = entries[i].target;
                                 lazyImage.src = lazyImage.dataset.src;
-                                lazyImage.srcset = lazyImage.dataset.srcset;
+                                if(lazyImage.dataset.srcset) {
+                                    lazyImage.srcset = lazyImage.dataset.srcset;
+                                }
                                 lazyImage.classList.remove("lazy");
                                 lazyImageObserver.unobserve(lazyImage);
                             }

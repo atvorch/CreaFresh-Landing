@@ -4,12 +4,12 @@
         @content;
     }
     @each $screen-name, $screen-size in $screens {
-        .#{$class-name}_#{$screen-name} {
+        .#{$class-name}-#{$screen-name} {
             @media screen and (min-width: #{$screen-size}px) {
                 @content;
             }
         }
-        .#{$class-name}_upto-#{$screen-name} {
+        .#{$class-name}-upto-#{$screen-name} {
             @media screen and (max-width: #{$screen-size - 1}px) {
                 @content;
             }
@@ -17,7 +17,7 @@
     }
 }
 
-.grid {
+.container {
     width: 100%;
     display: flex;
     flex-shrink: 0;
@@ -25,15 +25,7 @@
     padding-left: 10px;
     padding-right: 10px;
     position: relative;
-
-    &__row {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        margin-right: -#{$gap}px;
-        margin-left: -#{$gap}px;
-    }
-
+   
     @mixin grid($screen, $padding, $max-width: 100%) {
          & {
             @media (min-width: #{$screen}px) {
@@ -57,33 +49,37 @@
     @include grid($screen-gt, 40, 1500px);
 }
 
-.grid_fluid {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-right: -#{$gap}px;
+    margin-left: -#{$gap}px;
+}
+
+.container-fluid {
     position: relative;
     overflow: hidden;
     max-width: 100%;
 }
 
-[class*="grid__col-"] {
+[class*="col-"] {
     position: relative;
     display: block;
     padding-left: #{$gap}px;
     padding-right: #{$gap}px;
 }
 
-.grid__col_center {
-    margin-left: auto;
-    margin-right: auto;
-}
 
-// @include responsive-class(grid__col_1, $screens){width: 10%};
-@include responsive-class(grid__col-2, $screens){width: 20%};
-@include responsive-class(grid__col-3, $screens){width: 33.33333%};
-// @include responsive-class(grid__col-4, $screens){width: 40%};
-@include responsive-class(grid__col-5, $screens){width: 50%};
-// @include responsive-class(grid__col-6, $screens){width: 60%};
-// @include responsive-class(grid__col_7, $screens){width: 66.666667%};
-// @include responsive-class(grid__col_8, $screens){width: 80%};
-// @include responsive-class(grid__col_9, $screens){width: 90%};
-@include responsive-class(grid__col-10, $screens){width: 100%;};
-@include responsive-class(grid__col_hidden, $screens){display: none};
+// @include responsive-class(col_1, $screens){width: 10%};
+@include responsive-class(col-2, $screens){width: 20%};
+@include responsive-class(col-3, $screens){width: 33.33333%};
+// @include responsive-class(col-4, $screens){width: 40%};
+@include responsive-class(col-5, $screens){width: 50%};
+// @include responsive-class(col-6, $screens){width: 60%};
+// @include responsive-class(col_7, $screens){width: 66.666667%};
+// @include responsive-class(col_8, $screens){width: 80%};
+// @include responsive-class(col_9, $screens){width: 90%};
+@include responsive-class(col-10, $screens){width: 100%;};
+@include responsive-class(col_hidden, $screens){display: none};
 @include responsive-class(hidden, $screens){display: none};

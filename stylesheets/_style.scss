@@ -21,7 +21,7 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-weight: normal;
 }
 
@@ -35,7 +35,9 @@ body {
         box-sizing: border-box;
     }
 }
-
+img {
+    background-color: lightgray;
+}
 //------------------------------- CONTENT
 .header {
     width: 100%;
@@ -436,34 +438,30 @@ body {
 }
 .works {
 
-    &__image {
-        height: 50vw;
-        object-fit: cover;
+    &__work {
         margin-bottom: #{2 * $gap}px;
-        img {
-           width: 100%;
-           height: 100%; 
-        }
+        overflow: hidden;
 
         &:last-child {
             margin-bottom: 0;
         }
 
         @media (min-width: #{$screen-sm}px) {
-            height: 25vw;
-            max-height: 400px;
-
-            &_sm { 
-                height: 18vw;
-                max-height: 270px;
-            }
 
             &:nth-last-child(-n+2) {
                 margin-bottom: 0;
             }
         }
     }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
+
 .blog {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -517,121 +515,28 @@ body {
         font-weight: 600;
         color: black;
     }
+    
     &__post {
-        height: calc(50vw - 17px);
+        overflow: hidden;
         &:nth-child(-n+3) {
             margin-bottom: #{2* $gap}px;
         }
+       
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        height: calc(50vw - 25.5px);
         @media (min-width: #{$screen-sm}px) {
-            height: calc(50vw - 27px);
+            height: calc(50vw - 35.5px);
         }
         @media (min-width: #{$screen-md}px) {
             height: calc(20vw - 31.2px);
         }
         @media (min-width: #{$screen-lg}px) {
             max-height: 268.8px;
-        }
-    }
-    &__img {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        &_1 {
-            background-image: url("assets/images/placeholders/inst-3-placeholder.jpg");
-            background-position: 20% 70%;
-            background-size: 240%;
-
-            &.loaded {
-                background-image: url("assets/images/inst-3.jpg");
-            }
-
-            @media (min-width: #{$screen-sm}px) {
-                background-position: 89% 90%;
-                background-size: 270%;
-            }
-
-            @media (min-width: #{$screen-md}px) {
-                background-size: 310%;
-                background-position: 14% 25%;
-                &.loaded {
-                    background-image: url("assets/images/inst-1.jpg");
-                }
-                background-image: url("assets/images/placeholders/inst-1-placeholder.jpg");
-            }
-        }
-        &_2 {
-            &.loaded {
-                background-image: url("assets/images/inst-5.jpg");
-            }
-            background-image: url("assets/images/placeholders/inst-5-placeholder.jpg");
-            background-position: 40% center;
-            background-size: 150%;
-            @media (min-width: #{$screen-sm}px) {
-                background-position: 20% center;
-                background-size: 130%;
-            }
-            @media (min-width: #{$screen-md}px) {
-                background-size: 250%;
-                background-position: 85% 80%;
-                &.loaded {
-                    background-image: url("assets/images/inst-2.jpg");
-                }
-                background-image: url("assets/images/placeholders/inst-2-placeholder.jpg");
-            }
-        }
-        &_3 {
-            background-image: url("assets/images/placeholders/inst-1-placeholder.jpg");
-            background-position: 5% 15%;
-            background-size: 400%;
-            &.loaded {
-                background-image: url("assets/images/inst-1.jpg");
-            }
-            @media (min-width: #{$screen-sm}px) {
-                background-size: 230%;
-                background-position: left;
-            }
-            @media (min-width: #{$screen-md}px) {
-                background-position: 75% 70%;
-                background-size: 300%;
-                background-image: url("assets/images/placeholders/inst-3-placeholder.jpg");
-
-                &.loaded {
-                    background-image: url("assets/images/inst-3.jpg");
-                }
-            }
-        }
-        &_4 {
-            background-image: url("assets/images/placeholders/inst-2-placeholder.jpg");
-            background-size: 455%;
-            background-position: 64% 23%;
-            &.loaded {
-                background-image: url("assets/images/inst-2.jpg");
-            }
-            @media (min-width: #{$screen-sm}px) {
-                background-size: 250%;
-                background-position: 85% 80%;
-            }
-            @media (min-width: #{$screen-md}px) {
-                background-position: center;
-                background-image: url("assets/images/placeholders/inst-4-placeholder.jpg");
-                &.loaded {
-                    background-image: url("assets/images/inst-4.jpg");
-                }
-            }
-        }
-        &_5 {
-            background-image: url("assets/images/placeholders/inst-4-placeholder.jpg");
-            &.loaded {
-                background-image: url("assets/images/inst-4.jpg");
-            }
-            @media (min-width: #{$screen-md}px) {
-                background-image: url("assets/images/placeholders/inst-5-placeholder.jpg");
-                &.loaded {
-                    background-image: url("assets/images/inst-5.jpg");
-                }
-            }
         }
     }
 }
