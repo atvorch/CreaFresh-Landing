@@ -18,9 +18,11 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
-    "gulp-sass": "^4.0.1"
-  },
-  "devDependencies": {
-    "gulp-js-minify": "0.0.3"
+    "gulp-clean-css": "^3.9.4",
+    "gulp-jimp": "^1.2.9",
+    "gulp-js-minify": "0.0.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.4"
   }
 }

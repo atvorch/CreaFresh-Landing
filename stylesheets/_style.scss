@@ -539,7 +539,7 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         &_1 {
-            background-image: url("assets/images/placeholder-inst-3.jpg");
+            background-image: url("assets/images/placeholders/inst-3-placeholder.jpg");
             background-position: 20% 70%;
             background-size: 240%;
 
@@ -558,14 +558,14 @@ body {
                 &.loaded {
                     background-image: url("assets/images/inst-1.jpg");
                 }
-                background-image: url("assets/images/placeholder-inst-1.jpg");
+                background-image: url("assets/images/placeholders/inst-1-placeholder.jpg");
             }
         }
         &_2 {
             &.loaded {
                 background-image: url("assets/images/inst-5.jpg");
             }
-            background-image: url("assets/images/placeholder-inst-5.jpg");
+            background-image: url("assets/images/placeholders/inst-5-placeholder.jpg");
             background-position: 40% center;
             background-size: 150%;
             @media (min-width: #{$screen-sm}px) {
@@ -578,11 +578,11 @@ body {
                 &.loaded {
                     background-image: url("assets/images/inst-2.jpg");
                 }
-                background-image: url("assets/images/placeholder-inst-2.jpg");
+                background-image: url("assets/images/placeholders/inst-2-placeholder.jpg");
             }
         }
         &_3 {
-            background-image: url("assets/images/placeholder-inst-1.jpg");
+            background-image: url("assets/images/placeholders/inst-1-placeholder.jpg");
             background-position: 5% 15%;
             background-size: 400%;
             &.loaded {
@@ -595,7 +595,7 @@ body {
             @media (min-width: #{$screen-md}px) {
                 background-position: 75% 70%;
                 background-size: 300%;
-                background-image: url("assets/images/placeholder-inst-3.jpg");
+                background-image: url("assets/images/placeholders/inst-3-placeholder.jpg");
 
                 &.loaded {
                     background-image: url("assets/images/inst-3.jpg");
@@ -603,7 +603,7 @@ body {
             }
         }
         &_4 {
-            background-image: url("assets/images/placeholder-inst-2.jpg");
+            background-image: url("assets/images/placeholders/inst-2-placeholder.jpg");
             background-size: 455%;
             background-position: 64% 23%;
             &.loaded {
@@ -615,19 +615,19 @@ body {
             }
             @media (min-width: #{$screen-md}px) {
                 background-position: center;
-                background-image: url("assets/images/placeholder-inst-4.jpg");
+                background-image: url("assets/images/placeholders/inst-4-placeholder.jpg");
                 &.loaded {
                     background-image: url("assets/images/inst-4.jpg");
                 }
             }
         }
         &_5 {
-            background-image: url("assets/images/placeholder-inst-4.jpg");
+            background-image: url("assets/images/placeholders/inst-4-placeholder.jpg");
             &.loaded {
                 background-image: url("assets/images/inst-4.jpg");
             }
             @media (min-width: #{$screen-md}px) {
-                background-image: url("assets/images/placeholder-inst-5.jpg");
+                background-image: url("assets/images/placeholders/inst-5-placeholder.jpg");
                 &.loaded {
                     background-image: url("assets/images/inst-5.jpg");
                 }
