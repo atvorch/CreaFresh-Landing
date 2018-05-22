@@ -1,6 +1,13 @@
 # CreaFresh
 CreaFresh Landing Page
 
-# Install & Run
+# Install
 $ npm install  
-$ npm run build
+$ npm run build 
+
+# Run
+$ npm run build 
+or 
+$ npm run build-with-images (same build with images optimization task)
+
+
