@@ -1,5 +1,5 @@
 # CreaFresh
-CreaFresh Landing Page
+CreaFresh Landing Page -  https://atvorch.github.io/CreaFresh/  
 
 # Install  
 $ npm install     
@@ -9,5 +9,6 @@ $ npm run build
 or
   
 $ npm run build-with-images (same build with images optimization task)
+
 
 
