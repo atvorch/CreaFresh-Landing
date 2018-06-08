@@ -48,7 +48,7 @@ gulp.task('build:img', function () {
 gulp.task('build:js', function () {  
 	return gulp.src(path.src.js)
 	.pipe(sourcemaps.init())
-	.pipe(minifyjs())
+	// .pipe(minifyjs())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(path.build.js));
 });

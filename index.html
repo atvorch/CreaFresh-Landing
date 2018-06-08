@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <div id="header" class="container header">
+        <header id="header" class="container header">
             <svg id="logo-animation" class="header__logo" viewBox="0 0 180 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
                      <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
@@ -88,24 +88,25 @@
                         </svg>
                     </a>
                 </div>
-                <footer class="footer container container_fluid">
-                        <div class="col-10-upto-md col-5_md">Creafresh Design Agency<br class="hidden-sm"><span class="hidden-upto-sm">,&nbsp;</span>18000 Ukraine, Cherkassy, Il’ina st, ap 245 - 23<br>
-                                +38(063) 374 44 62 info@creafresh.com</p>
-                            <div class="col-10-upto-md col-5_md">
-                                <div class=" row">
-                                    <div class="col-10 footer__social">
-                                        <a class="footer__link footer__instagram" href="">Instagram</a>
-                                        <a class="footer__link footer__facebook" href="">Facebook</a>
-                                    </div>
-                                </div>
-                                <div class="row footer__sign">
-                                    <span class="col-10">© CreaFresh 2015-2018. All rights reserved. </span>    
+                <footer id="contacts" class="footer container container-fluid">
+                    <div class="row">
+                        <p class="footer__contacts col-10-upto-md col-5_md">Creafresh Design Agency<br class="hidden-sm"><span class="hidden-upto-sm">,&nbsp;</span>18000 Ukraine, Cherkassy, Il’ina st, ap 245 - 23<br>
+                            +38(063) 374 44 62 info@creafresh.com</p>
+                        <div class="col-10-upto-md col-5-md">
+                            <div class=" row">
+                                <div class="col-10 footer__social">
+                                    <a class="footer__link footer__instagram" href="#">Instagram</a>
+                                    <a class="footer__link footer__facebook" href="#">Facebook</a>
                                 </div>
                             </div>
+                            <div class="row footer__sign">
+                                <span class="col-10">© CreaFresh 2015-2018. All rights reserved. </span>    
+                            </div>
                         </div>
-                </footer> 
+                    </div>
+                </footer>   
             </div>
-        </div>
+        </header>
             
         <main class="content">
             <section id="about" class="about">
@@ -253,41 +254,7 @@
             </div>
         </footer>   
        
-        <script src="lazy-loading.js">
-        </script>
-        <script>
-            window.onload = function() {
-                var toggle = document.getElementById('menu-toggle');
-                var menu = document.getElementById('menu');
-                var body = document.getElementsByTagName('body');
-
-                toggle.onclick = function() {
-                    menu.classList.toggle("menu_open");// close/open menu
-                    body[0].classList.toggle("no-scroll");// disable body scroll for better User Experience
-                    toggle.classList.toggle("menu-toggle_cross");
-                }
-
-                var anchors = document.getElementsByClassName('menu__link');
-                
-                for(var i = 0; i < anchors.length; i++) {
-                    var anchor = anchors[i];
-                    anchor.onclick = function() {
-                        // Remove selected class from all menu links 
-                        var links = document.getElementsByClassName('menu__link');
-                        for(var i = 0; i < links.length; i++) {
-                            links[i].classList.remove("menu__link_selected");
-                        }
-                        // add selected to menu link
-                        if(!this.classList.contains("menu__home")){
-                            this.classList.add("menu__link_selected");
-                        }
-                        toggle.classList.toggle("menu-toggle_cross");
-                        body[0].classList.toggle("no-scroll");// disable body scroll for better User Experience
-                        // close menu
-                        menu.classList.remove("menu_open");
-                    }
-                }
-            }
-        </script>
+        <script src="lazy-loading.js"></script>
+        <script defer src="menu-toggle.js"></script>
     </body>
 </html>
